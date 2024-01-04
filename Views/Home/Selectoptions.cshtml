@@ -1,0 +1,95 @@
+﻿@using Assessmentselect.Models;
+@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<div class="mainblock">
+    <div class="content">
+        <form>
+            <div style="margin-top:15px;">
+                <div class="label"><label>Area</label></div>
+                @if (ViewBag.arealist != null)
+                {
+                    <div>
+                        <select id="area">
+                            <option>--Select--</option>
+                            @foreach (string area in ViewBag.arealist)
+                            {
+                                <option value="@area">@area</option>
+                            }
+                        </select>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        <select>
+                            <option>--Select--</option>
+                        </select>
+                    </div>
+                }
+            </div>
+            <div style="margin-top:15px;">
+                <div class="label"><label>Section</label></div>
+                @if (ViewBag.section != null)
+                {
+                    <div>
+                        <select id="sec">
+                            <option>--Select--</option>
+                            
+                            @foreach (string sec in ViewBag.section)
+                            {
+                                <option value="@sec">@sec</option>
+                            }
+                        </select>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        <select>
+                            <option>--Select--</option>
+                        </select>
+                    </div>
+                }
+            </div>
+            <div style="margin-top:15px;">
+
+                <div class="label">
+                    <label>Sub Section</label>
+                </div>
+                @if (ViewBag.subsection != null)
+                {
+                    <div>
+                        <select id="subsec">
+                            <option>--Select--</option>
+                            @foreach (string subsec in ViewBag.subsection)
+                            {
+                                <option value="@subsec">@subsec</option>
+                            }
+                        </select>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        <select>
+                            <option>--Select--</option>
+                        </select>
+                    </div>
+                }
+            </div>
+            <div style="margin-top:25px;">
+                <div class="label">
+                    <label>Point</label>
+                </div>
+                <div id="point" style="font-weight:bold; font-size:16px;">--</div>
+            </div>
+            <div style="margin-top:35px;text-align:center">
+                <input type="hidden" value="1" id="questionnumber"/>
+                <button type="button" class="btn" id="pre" style="display:none;" onclick="getquestions('prev')">PREVIOUS</button>
+                <button type="button" class="btn" id="next" value="1" onclick="getquestions('next')">NEXT</button>
+            </div>
+        </form>
+    </div>
+</div>

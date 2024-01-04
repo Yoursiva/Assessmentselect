@@ -1,0 +1,37 @@
+﻿.mainblock {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    width: 50%;
+    height: auto;
+    margin-left: 280px;
+    background: #DDE3E9;
+    padding: 3%;
+}
+
+.label {
+    float: left;
+    width: 30%;
+    margin-top: 10px;
+}
+
+select {
+    width: 65%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.btn {
+    width: 30%;
+    height: 40px;
+    padding: 10px;
+    background: #3E149C;
+    color: #fff;
+    border: 1px solid;
+    margin-left: 20px;
+    border-radius: 15px;
+}

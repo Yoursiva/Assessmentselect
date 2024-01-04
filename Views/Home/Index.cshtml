@@ -1,0 +1,25 @@
+﻿@using Assessmentselect.Models;
+@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="~/Scripts/site.js" asp-append-version="true"></script>
+<link href="~/Content/Site.css" rel="stylesheet"/>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "Home/Selectoptions",
+            data: { all: 'all' },
+            success: function (response) {
+                $("#con").append(response);
+            },
+        })
+    });
+</script>
+<div id="con">
+
+</div>
